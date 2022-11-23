@@ -5,9 +5,9 @@ phases:
   pre_build:
     commands:
       - echo Updating repository package...
-      - apt update && apt upgrade -y
+      - apt-get update && apt-get upgrade -y
       - echo Installing the necessary package...
-      - apt install -y texlive-base texlive-fonts-extra texlive-latex-extra
+      - apt-get install -y texlive-base texlive-fonts-extra texlive-latex-extra
 
   build:
     commands:
