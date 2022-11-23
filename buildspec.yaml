@@ -1,0 +1,22 @@
+---
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Installing the necessary package...
+      - apt-get install texlive-base texlive-fonts-extra texlive-latex-extra
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the latex...
+      - pdflatex cv.tex
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
+artifacts:
+  files:
+    - cv.pdf
